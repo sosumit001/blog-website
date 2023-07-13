@@ -1,0 +1,77 @@
+#root {
+ background-color: rgb(255, 255, 255);
+  width: 100vw;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  color: black;
+  --dark-orange:#FBBC5D;
+  --light-orange:#FEF3B2;
+  --dark-text-orange:rgb(143, 125, 92);
+}
+
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#root {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.app-container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-orange);
+  z-index: 100;
+  overflow-y: scroll;
+}
+.image-container{
+  position: relative;
+  height: fit-content;
+  width: 80%;
+  margin:120px auto -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+  justify-content: start;
+  color: black;
+}
+.image-container img{
+  width: 150px;
+  left: 2%;
+}
+.image-container span{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 2.8rem;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  text-align: left;
+}
+.about-container{
+  max-width: 100%;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+}
+.about-container div{
+  width: 80%;
+  padding:15px 5px 15px;
+  border-top: 1px solid;
+
+}
+.about-container p{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.about-container span{
+  color: var(--dark-text-orange);
+}

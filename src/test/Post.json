@@ -1,0 +1,75 @@
+{
+  "data": {
+    "posts": [
+      {
+        "title": "Introduction to WebAssembly",
+        "content": [
+          {
+            "type": "subheading",
+            "value": {
+              "title": "Webassembly Text | .wat",
+              "value": "`<div class = \"template-para\"><span class=\"template-bold\"> Human-readable representation of WebAssembly code</span>  It is a text format that provides a more accessible and readable way to write and understand WebAssembly programs compared to the binary format</div>`"
+            }
+          },
+          {
+            "type": "code",
+            "value": {
+              "title": "WebAssembly Text",
+              "language": "javascript",
+              "value": {
+                "text": "`(module`\n\n`(func (export \"sum\") (param i32 i32) (result i32)`\n\n`local.get 0`\n\n`local.get 1`\n\n`i32.add`\n\n`)`\n\n`)`\n"
+              }
+            }
+          },
+          {
+            "type": "code",
+            "value": {
+              "title": "WebAssembly Binary",
+              "language": "javascript",
+              "value": {
+                "text": "00 61 73 6D 01 00 00 00 01 07 01 60 02 7F 7F 01\n7F 03 02 01 00 07 07 01 03 73 75 6D 00 00 0A 09\n01 07 00 20 00 20 01 6A 0B"
+              }
+            }
+          },
+          {
+            "type": "paragraph",
+            "value": {
+              "title": null,
+              "value": "`<div class = \"template-para\"><span class=\"template-bold\"> WebAssembly Text Format (.wat) file compiled to Webassembly byte format</span>  , to achieve this conversion you can use WebAssembly Binary Toolkit (wabt) toolset</div>`"
+            }
+          },
+          {
+            "type": "paragraph",
+            "value": {
+              "title": "Compile .wasm to .wat",
+              "value": "`<div class=\"template-para\"><span class=\"template-bold\">wat2wasm add.wat -o add.wasm</span></div>`"
+            }
+          },
+          {
+            "type": "paragraph",
+            "value": {
+              "title": "Web can also do the reverse ",
+              "value": "`<div class=\"template-para\"><span class=\"template-bold\">wasm2wat add.wasm -o add.wat</span></div>`"
+            }
+          },
+          {
+            "type": "subheading",
+            "value": {
+              "title": "How Browsers Understand WebAssembly 🤓",
+              "value": "`<div class = \"template-para\"><span class=\"template-bold\">HTML page that loads a JavaScript file</span> , and within that JavaScript file, you use the <span class=\"template-bold\"> WebAssembly API to load a .wasm </span> file. The .wasm file contains compiled code that can be executed by the browser at near-native speed</div>`"
+            }
+          },
+          {
+            "type": "image",
+            "value": {
+              "caption": "how browser works",
+              "src": {
+                "url": "https://media.graphassets.com/OlhyEl98QKXSHeVJKtDJ"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

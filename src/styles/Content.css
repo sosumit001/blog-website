@@ -1,0 +1,93 @@
+.contentWrapper{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 80%;
+    left: 10%;
+    flex-direction: column;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+}
+.contentWrapper h1{
+    position:sticky;
+    padding-left: 30px;
+    display: flex;
+    margin-bottom: -1px;
+    top:0;
+    font-size:1.6em;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.contentWrapper::-webkit-scrollbar{
+    display: none;
+}
+.contentWrapper::after{
+    position: fixed;
+    content: "";
+    width:10vw ;
+    min-height: 100%;
+    left: 0;
+    top:0;
+    background-color: #f0f0f0;
+    box-shadow:inset -2px 0px 4px 0px rgb(215, 215, 215);
+}
+.contentWrapper::before{
+    position: fixed;
+    content: "";
+    width:10vw ;
+    min-height: 100%;
+    left: calc(90vw + 4px);
+    top:0;
+    background-color: #f0f0f0;
+    box-shadow:inset 2px 0px 4px 0px rgb(215, 215, 215);
+}
+.template-bold{
+    color: rgb(63, 110, 176);
+}
+
+.template-subheading{
+    width: 80%;
+    padding: 50px;
+}
+.template-paragraph{
+    width: 80%;
+    margin-left: 50px;
+}
+.template-codebox{
+    width: 80%;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.template-codebox h4{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.template-imgbox img{
+    width: 80%;
+    margin: 30px 10%;
+}
+
+@media only screen and (max-width: 540px) {
+    .contentWrapper{
+        width: 95%;
+        left: 2.5%;
+    }
+    .template-codebox{
+        width: 90%;
+        margin: 30px 10px;
+    }
+    .template-subheading,.template-paragraph,.template-codebox{
+        width: 95%;
+        margin: auto;
+        padding: 10px;
+    }
+    .contentWrapper::after,.contentWrapper::before{
+        display: none;
+    }
+  }

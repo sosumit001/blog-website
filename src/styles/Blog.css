@@ -1,0 +1,110 @@
+.blog-container {
+  background-color: green;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.blog-control-container,
+.blog-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* controller */
+.blog-control-container {
+  width: 40%;
+  background-color: white;
+  gap: 20px;
+}
+.blog-control-container span {
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms;
+  z-index: 1000;
+  border: 1px solid;
+  -webkit-tap-highlight-color: rgba(240, 248, 255, 0);
+}
+
+/* content */
+.blog-content-container {
+  width: 60%;
+  background-color: var(--light-orange);
+  z-index: 1000;
+  border-left: 2px solid;
+}
+
+/* loading... */
+.blog-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  background-color: var(--light-orange);
+  opacity: 0.8;
+}
+.blog-loading img{
+    height: 20px;
+}
+
+@media only screen and (max-width: 540px){
+  .blog-container{
+    flex-direction: column;
+  }
+  .blog-control-container{
+    display: none;
+  }
+  .blog-control-container-mobile{
+    width: 200px;
+    position: absolute;
+
+    height: 100%;
+    padding: 30px;
+    -webkit-tap-highlight-color: rgba(240, 248, 255, 0);
+    flex-wrap: wrap;
+    justify-content: left;
+    z-index: 1100;
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 500ms;
+  }
+
+  .blog-control-container-mobile span{
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .blog-content-container {
+    width: 100%;
+  }
+  .blog-controller-btn{
+    top:20px;
+    left: 280px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 500ms;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(240, 248, 255, 0);
+  }
+  .blog-controller-btn img{
+    width: 40%;
+    margin: auto;
+  }
+
+}
